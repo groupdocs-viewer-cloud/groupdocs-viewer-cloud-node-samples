@@ -1,0 +1,152 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>GroupDocs.Viewer.Cloud.Node.Examples</Name>
+    <RootNamespace>GroupDocs.Viewer.Cloud.Node.Examples</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>45cf79e0-73f0-49dd-b74c-7c1c936f719e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Run_Examples.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Common_Utilities\Utils.js" />
+    <Compile Include="Document_Information\Viewer_Node_Create_CAD_Layers_Cache_HTML.js" />
+    <Compile Include="Document_Information\Viewer_Node_Create_CAD_Layers_Cache_Image.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_CAD_DocumentInfo_Html.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_CAD_DocumentInfo_Image.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_DocumentInfo_From_Request_Html.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_DocumentInfo_From_Request_Image.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_Document_Info_HTML.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_Document_Info_Image.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_Document_Info_URL_HTML.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_Document_Info_URL_Image.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_Document_Info_With_Options_HTML.js" />
+    <Compile Include="Document_Information\Viewer_Node_Get_Document_Info_With_Options_Image.js" />
+    <Compile Include="Fonts_Resource\Viewer_Node_Delete_Fonts_Resources.js" />
+    <Compile Include="Fonts_Resource\Viewer_Node_Get_Fonts_Resources.js" />
+    <Compile Include="Page_Resources\Viewer_Node_Get_Responsive_HTML.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Create_Pdf_File_from_Url_HTML.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Create_Pdf_File_from_Url_Image.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Create_Pdf_File_Request_HTML.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Create_Pdf_File_Request_Image.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Get_Pdf_File_from_Url_HTML.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Get_Pdf_File_from_Url_Image.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Get_Pdf_File_HTML.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Get_Pdf_File_Image.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Get_Watermark_Pdf_File_HTML.js" />
+    <Compile Include="PDF_Rendering\Viewer_Node_Get_Watermark_Pdf_File_Image.js" />
+    <Compile Include="Run_Examples.js" />
+    <Compile Include="Supported_File_Formats\Viewer_Node_Get_All_Supported_Formats.js" />
+    <Compile Include="Working_With_Attachments\Attachments\Viewer_Node_Get_Attachments_Html.js" />
+    <Compile Include="Working_With_Attachments\Attachments\Viewer_Node_Get_Attachments_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachments\Viewer_Node_Get_Attachment_From_Email_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachments\Viewer_Node_Get_Attachment_From_Email_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Information\Viewer_Node_Get_Attachment_Info_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Information\Viewer_Node_Get_Attachment_Info_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Information\Viewer_Node_Get_Attachment_Info_WithOptions_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Information\Viewer_Node_Get_Attachment_Info_WithOptions_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Information\Viewer_Node_Get_Document_Info_WithOptions_URL_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Information\Viewer_Node_Get_Document_Info_WithOptions_URL_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Create_Attachment_Pages_Cache_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Create_Attachment_Pages_Cache_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Delete_Attachment_Pages_Cache_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Delete_Attachment_Pages_Cache_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Get_Attachment_Pages_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Get_Attachment_Pages_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Get_Attachment_Pages_Zip_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Get_Attachment_Pages_Zip_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Get_Attachment_Page_HTML.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Pages\Viewer_Node_Get_Attachment_Page_Image.js" />
+    <Compile Include="Working_With_Attachments\Attachment_Page_Resources\Viewer_Node_Get_Attachment_Page_Resource_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Minification_Of_HTML_And_SVG\Viewer_Node_Create_Pages_Cache_Minified_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Document_Cache_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Document_Cache_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Document_Cache_Url_With_HTMLOptions.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Document_Cache_Url_With_ImageOptions.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Pages_Cache_Request_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Pages_Cache_Request_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Project_Page_Cache_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Create_Project_Page_Cache_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Download_Document_Page_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Download_Document_Page_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Exclude_Fonts.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Get_Pages_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Get_Pages_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Get_Pages_URL_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Get_Pages_URL_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Get_ZIP_With_Pages_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Get_ZIP_With_Pages_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Remove_Document_Cache_for_HTML_Pages.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Remove_Document_Cache_for_Image_Pages.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Render_CAD_Tiles.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Render_Hidden_Rows.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Render_PDF_DefaultFont.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Render_PrintArea_Only.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Reorder_Page_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Reorder_Page_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Rotate_Page_HTML.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Rotate_Page_Image.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Set_Image_Quality.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_Pages\Viewer_Node_Text_Overflow_Mode.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Document_To_Responsive_HTML\Viewer_Node_Get_Responsive_HTML_Options.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Email_Pages\Viewer_Node_Render_Email_Header.js" />
+    <Compile Include="Working_With_Document_Pages\Rendering_Email_Pages\Viewer_Node_Render_Email_Image_PageSize.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="Resources\viewerdocs\one-file.docx" />
+    <Content Include="Resources\viewerdocs\one-page.docx" />
+    <Content Include="Resources\viewerdocs\one-page.jpg" />
+    <Content Include="Resources\viewerdocs\one-page1.docx" />
+    <Content Include="Resources\viewerdocs\sample-one-page.docx" />
+    <Content Include="Resources\viewerdocs\sample-one-page.pdf" />
+    <Content Include="Resources\viewerdocs\sample-one-page1.docx" />
+    <Content Include="Resources\viewerdocs\sample.docx" />
+    <Content Include="Resources\viewerdocs\sample.pdf" />
+    <Content Include="Resources\viewerdocs\sample2.mpp" />
+    <Content Include="Resources\viewerdocs\sample3.mpp" />
+    <Content Include="Resources\viewerdocs\signature.jpg" />
+    <Content Include="Resources\viewerdocs\with-attachment.msg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common_Utilities\" />
+    <Folder Include="Document_Information\" />
+    <Folder Include="Fonts_Resource\" />
+    <Folder Include="Page_Resources\" />
+    <Folder Include="PDF_Rendering\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\viewerdocs\" />
+    <Folder Include="Supported_File_Formats\" />
+    <Folder Include="Working_With_Attachments\" />
+    <Folder Include="Working_With_Attachments\Attachments\" />
+    <Folder Include="Working_With_Attachments\Attachment_Information\" />
+    <Folder Include="Working_With_Attachments\Attachment_Pages\" />
+    <Folder Include="Working_With_Attachments\Attachment_Page_Resources\" />
+    <Folder Include="Working_With_Document_Pages\" />
+    <Folder Include="Working_With_Document_Pages\Minification_Of_HTML_And_SVG\" />
+    <Folder Include="Working_With_Document_Pages\Rendering_Document_Pages\" />
+    <Folder Include="Working_With_Document_Pages\Rendering_Document_To_Responsive_HTML\" />
+    <Folder Include="Working_With_Document_Pages\Rendering_Email_Pages\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>

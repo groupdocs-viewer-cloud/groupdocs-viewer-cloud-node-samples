@@ -1,0 +1,13 @@
+{
+  "name": "group-docs.viewer.cloud.node.examples",
+  "version": "0.0.0",
+  "description": "GroupDocs.Viewer.Cloud.Node.Examples",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "asposestoragecloud": "^1.0.5",
+    "groupdocs-viewer-cloud": "^18.11.0"
+  }
+}
