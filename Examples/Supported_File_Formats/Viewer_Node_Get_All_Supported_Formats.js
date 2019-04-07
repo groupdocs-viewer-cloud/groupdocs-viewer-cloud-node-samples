@@ -3,12 +3,13 @@ class Viewer_Node_Get_All_Supported_Formats {
 	static Run() {
 		// retrieve supported file-formats
 		viewerApi.getSupportedFileFormats()
-			.then(function (result) {
+			.then(function (response) {
 				console.log("Supported file-formats:");
-				result.formats.forEach(function (format) {
-					console.log(format.fileFormat + " (" + format.extension + ")");
+				response.formats.forEach(function (format) {
+					console.log(format.fileFormat + "(" + format.extension + ")");
 				});
-			})["catch"](function (error) {
+			})
+			.catch(function (error) {
 				console.log("Error: " + error.message);
 			});
 	}

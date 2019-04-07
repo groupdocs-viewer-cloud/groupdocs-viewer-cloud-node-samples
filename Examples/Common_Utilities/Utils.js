@@ -1,30 +1,30 @@
 "use strict";
 class Utils {
 	static Upload_Test_File() {
-		var storageApi = new StorageApi({
-			appSid: appSid,
-			apiKey: appKey,
-			baseURI: "https://api.groupdocs.cloud/v1"
-		});
-
-		var resourcesFolder = './Resources/Viewerdocs/';
+		var resourcesFolder = './Resources/viewerdocs/';
 
 		fs.readdir(resourcesFolder, (err, files) => {
+			console.log("Total files in 'viewerdocs' folder: " + files.length);
 			files.forEach(file => {
-				storageApi.GetIsExist(file, null, null, (existResponse) => {
-					if (existResponse.body.fileExist.isExist === false) {
-						storageApi.PutCreate(file, null, null, srcFilePath, (createResponse) => {
-							if (createResponse.status === "OK") {
-								console.log("Uploaded: " + file);
-							} else {
-								console.log("ELSE: " + createResponse);
-							}
-						});
-					}
-					else {
-						console.log("File already exists: " + file);
-					}
-				});
+				var srcFilePath = "viewerdocs/" + file;
+				var existsRequest = new groupdocs_viewer_cloud_1.ObjectExistsRequest(srcFilePath, myStorage);
+				//console.log("srcFilePath: " + srcFilePath);
+				storageApi.objectExists(existsRequest)
+					.then(function (existResponse) {
+						//console.log("existResponse.exists: " + existResponse.exists);
+						if (existResponse.exists === false) {
+							var uploadRequest = new groupdocs_viewer_cloud_1.UploadFileRequest(srcFilePath, file);
+							fileApi.uploadFile(uploadRequest).then(function (createResponse) {
+								console.log("Uploaded: " + srcFilePath);
+							}).catch(function (error) {
+								console.log("File already exists: " + file);
+								console.log("Error: " + error.message);
+							});
+						}
+					})
+					.catch(function (error) {
+						console.log("Error: " + error.message);
+					});
 			});
 		});
 	}
