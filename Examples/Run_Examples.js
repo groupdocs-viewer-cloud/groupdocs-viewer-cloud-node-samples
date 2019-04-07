@@ -1,26 +1,31 @@
 "use strict";
 global.groupdocs_viewer_cloud_1 = require("groupdocs-viewer-cloud");
-global.StorageApi = require("asposestoragecloud");
 global.fs = require("fs");
 global.serializer_1 = require("groupdocs-viewer-cloud/lib/serializer");
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////// REPLACE YOUR APP KEY AND APP SID HERE /////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Get your app_sid and app_key at https://dashboard.groupdocs.cloud (free registration is required).
+//// ***********************************************************
+////          GroupDocs.Viewer Cloud API Examples
+//// ***********************************************************
 
-global.appSid = "xxxxx-xxxx";
-global.appKey = "xxxxxx";
+//TODO: Get your AppSID and AppKey at https://dashboard.groupdocs.cloud (free registration is required).
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+global.appSid = "XXXXX-XXXXX-XXXXX";
+global.appKey = "XXXXXXXXXX";
+global.myStorage = "XXXXX";
 
 // construct ViewerApi
 global.viewerApi = groupdocs_viewer_cloud_1.ViewerApi.fromKeys(appSid, appKey);
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// construct StorageApi
+global.storageApi = groupdocs_viewer_cloud_1.StorageApi.fromKeys(appSid, appKey);
 
+// construct FolderApi
+global.folderApi = groupdocs_viewer_cloud_1.FolderApi.fromKeys(appSid, appKey);
+
+// construct FileApi
+global.fileApi = groupdocs_viewer_cloud_1.FileApi.fromKeys(appSid, appKey);
+
+// Uploading sample test files from local to storage under folder 'viewers'
 console.log("Executing Upload Test Files...");
 require('./Common_Utilities/Utils').Upload_Test_File();
 
@@ -28,83 +33,141 @@ require('./Common_Utilities/Utils').Upload_Test_File();
 console.log("*** Executing examples...");
 // ******* Execute Examples *******
 
+			//// ***********************************************************
+			///// ***** WORKING WITH STORAGE *****
+			//// ***********************************************************
+
+//// Is Storage Exist
+//require('./Working_With_Storage/Viewer_Node_Storage_Exist').Run();
+
+//// Get Get Disc Usage
+//require('./Working_With_Storage/Viewer_Node_Get_Disc_Usage').Run();
+
+//// Get File Versions
+//require('./Working_With_Storage/Viewer_Node_Get_File_Versions').Run();
+
+//// Is Object Exists
+//require('./Working_With_Storage/Viewer_Node_Object_Exists').Run();
+
+
+			//// ***********************************************************
+			//// ***** WORKING WITH FOLDER *****
+			//// ***********************************************************
+
+//// Create Folder
+////require('./Working_With_Folder/Viewer_Node_Create_Folder').Run();
+
+//// Copy Folder
+////require('./Working_With_Folder/Viewer_Node_Copy_Folder').Run();
+
+//// Move Folder
+////require('./Working_With_Folder/Viewer_Node_Move_Folder').Run();
+
+//// Delete Folder
+//require('./Working_With_Folder/Viewer_Node_Delete_Folder').Run();
+
+//// Get Files List
+//require('./Working_With_Folder/Viewer_Node_Get_Files_List').Run();
+
+
+			//// ***********************************************************
+			//// ***** WORKING WITH FILES *****
+			//// ***********************************************************
+
+//// Upload File
+//require('./Working_With_Files/Viewer_Node_Upload_File').Run();
+
+//// Copy File
+//require('./Working_With_Files/Viewer_Node_Copy_File').Run();
+
+//// Move File
+//require('./Working_With_Files/Viewer_Node_Move_File').Run();
+
+//// Delete File
+//require('./Working_With_Files/Viewer_Node_Delete_File').Run();
+
+//// Download_File
+//require('./Working_With_Files/Viewer_Node_Download_File').Run();
+
+
+			//// ***********************************************************
+			//// ***** WORKING WITH SUPPORTED FORMATS *****
+			//// ***********************************************************
+
+// Get All Supported Formats
 require('./Supported_File_Formats/Viewer_Node_Get_All_Supported_Formats').Run();
-//require('./Working_With_Attachments/Attachments/Viewer_Node_Get_Attachment_From_Email_HTML').Run();
-//require('./Working_With_Attachments/Attachments/Viewer_Node_Get_Attachment_From_Email_Image').Run();
-//require('./Working_With_Attachments/Attachments/Viewer_Node_Get_Attachments_Html').Run();
-//require('./Working_With_Attachments/Attachments/Viewer_Node_Get_Attachments_Image').Run();
-////require('./Working_With_Attachments/Attachment_Information/Viewer_Node_Get_Attachment_Info_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Information/Viewer_Node_Get_Attachment_Info_Image').Run();
-//require('./Working_With_Attachments/Attachment_Information/Viewer_Node_Get_Attachment_Info_WithOptions_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Information/Viewer_Node_Get_Attachment_Info_WithOptions_Image').Run();
-//require('./Working_With_Attachments/Attachment_Information/Viewer_Node_Get_Document_Info_WithOptions_URL_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Information/Viewer_Node_Get_Document_Info_WithOptions_URL_Image').Run();
-////require('./Working_With_Attachments/Attachment_Page_Resources/Viewer_Node_Get_Attachment_Page_Resource_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Create_Attachment_Pages_Cache_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Create_Attachment_Pages_Cache_Image').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Delete_Attachment_Pages_Cache_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Delete_Attachment_Pages_Cache_Image').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Get_Attachment_Page_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Get_Attachment_Page_Image').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Get_Attachment_Pages_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Get_Attachment_Pages_Image').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Get_Attachment_Pages_Zip_HTML').Run();
-//require('./Working_With_Attachments/Attachment_Pages/Viewer_Node_Get_Attachment_Pages_Zip_Image').Run();
-//require('./Fonts_Resource/Viewer_Node_Get_Fonts_Resources').Run();
-//require('./Fonts_Resource/Viewer_Node_Delete_Fonts_Resources').Run();
-//require('./Page_Resources/Viewer_Node_Get_Responsive_HTML').Run();
-////require('./Document_Information/Viewer_Node_Create_CAD_Layers_Cache_HTML').Run();
-////require('./Document_Information/Viewer_Node_Create_CAD_Layers_Cache_Image').Run();
-////require('./Document_Information/Viewer_Node_Get_CAD_DocumentInfo_Html').Run();
-////require('./Document_Information/Viewer_Node_Get_CAD_DocumentInfo_Image').Run();
-//require('./Document_Information/Viewer_Node_Get_Document_Info_HTML').Run();
-//require('./Document_Information/Viewer_Node_Get_Document_Info_Image').Run();
-//require('./Document_Information/Viewer_Node_Get_Document_Info_URL_HTML').Run();
-//require('./Document_Information/Viewer_Node_Get_Document_Info_URL_Image').Run();
-//require('./Document_Information/Viewer_Node_Get_Document_Info_With_Options_HTML').Run();
-//require('./Document_Information/Viewer_Node_Get_Document_Info_With_Options_Image').Run();
-////require('./Document_Information/Viewer_Node_Get_DocumentInfo_From_Request_Html').Run();
-////require('./Document_Information/Viewer_Node_Get_DocumentInfo_From_Request_Image').Run();
-//require('./PDF_Rendering/Viewer_Node_Create_Pdf_File_from_Url_HTML').Run();
-//require('./PDF_Rendering/Viewer_Node_Create_Pdf_File_from_Url_Image').Run();
-////require('./PDF_Rendering/Viewer_Node_Create_Pdf_File_Request_HTML').Run();
-////require('./PDF_Rendering/Viewer_Node_Create_Pdf_File_Request_Image').Run();
-//require('./PDF_Rendering/Viewer_Node_Get_Pdf_File_from_Url_HTML').Run();
-//require('./PDF_Rendering/Viewer_Node_Get_Pdf_File_from_Url_Image').Run();
-//require('./PDF_Rendering/Viewer_Node_Get_Pdf_File_HTML').Run();
-//require('./PDF_Rendering/Viewer_Node_Get_Pdf_File_Image').Run();
-//require('./PDF_Rendering/Viewer_Node_Get_Watermark_Pdf_File_HTML').Run();
-//require('./PDF_Rendering/Viewer_Node_Get_Watermark_Pdf_File_Image').Run();
-//require('./Working_With_Document_Pages/Minification_Of_HTML_And_SVG/Viewer_Node_Create_Pages_Cache_Minified_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_To_Responsive_HTML/Viewer_Node_Get_Responsive_HTML_Options').Run();
-//require('./Working_With_Document_Pages/Rendering_Email_Pages/Viewer_Node_Render_Email_Header').Run();
-//require('./Working_With_Document_Pages/Rendering_Email_Pages/Viewer_Node_Render_Email_Image_PageSize').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Document_Cache_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Document_Cache_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Document_Cache_Url_With_HTMLOptions').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Document_Cache_Url_With_ImageOptions').Run();
-////require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Pages_Cache_Request_HTML').Run();
-////require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Pages_Cache_Request_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Project_Page_Cache_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Create_Project_Page_Cache_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Download_Document_Page_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Download_Document_Page_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Exclude_Fonts').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Get_Pages_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Get_Pages_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Get_Pages_URL_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Get_Pages_URL_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Get_ZIP_With_Pages_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Get_ZIP_With_Pages_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Remove_Document_Cache_for_HTML_Pages').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Remove_Document_Cache_for_Image_Pages').Run();
-////require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Render_CAD_Tiles').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Render_Hidden_Rows').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Render_PDF_DefaultFont').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Render_PrintArea_Only').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Reorder_Page_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Reorder_Page_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Rotate_Page_HTML').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Rotate_Page_Image').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Set_Image_Quality').Run();
-//require('./Working_With_Document_Pages/Rendering_Document_Pages/Viewer_Node_Text_Overflow_Mode').Run();
+
+			//// ***********************************************************
+			//// ***** WORKING WITH DOCUMENT INFORMATION *****
+			//// ***********************************************************
+
+//// Get Document Information With Minimal ViewOptions
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_Minimal_ViewOptions').Run();
+
+//// Get Document Information With HTML View Format
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_HTML_View_Format').Run();
+
+//// Get Document Information With Image View Format
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_Image_View_Format').Run(groupdocs_viewer_cloud_1.ViewOptions.ViewFormatEnum.Png);
+
+//// Get Document Information With Render Hidden Pages
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_Render_Hidden_Pages').Run();
+
+//// Get Document Information With Spreadsheet Options
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_SpreadsheetOptions').Run();
+
+//// Get Document Information With Spreadsheet Render Hidden Rows
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_Spreadsheet_Render_Hidden_Rows_Option').Run();
+
+//// Get Document Information With CAD Options
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_CAD_Options').Run();
+
+//// Get Document Information With Project Options
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_Project_Options').Run();
+
+//// Get Document Information With Image View Options
+//require('./Working_With_Document_Information/Viewer_Node_Get_Info_With_Image_View_Options_Options').Run();
+
+			//// ***********************************************************
+			//// ***** WORKING WITH DOCUMENT VIEWS *****
+			//// ***********************************************************
+
+//// Create View With Minimal & Default ViewFormat & ViewOptions
+//require('./Working_With_View/Viewer_Node_Create_View_With_Minimal_ViewOptions').Run();
+
+//// Create View With HTML View Format
+//require('./Working_With_View/Viewer_Node_Create_View_With_HTML_View_Format').Run();
+
+//// Create View With Image View Format
+//require('./Working_With_View/Viewer_Node_Create_View_With_Image_View_Format').Run(groupdocs_viewer_cloud_1.ViewOptions.ViewFormatEnum.Png);
+
+//// Create View With Render Hidden Pages
+//require('./Working_With_View/Viewer_Node_Create_View_With_Render_Hidden_Pages').Run();
+
+//// Create View With Spreadsheet Options
+//require('./Working_With_View/Viewer_Node_Create_View_With_SpreadsheetOptions').Run();
+
+//// Create View With Spreadsheet Render Hidden Rows
+//require('./Working_With_View/Viewer_Node_Create_View_With_Spreadsheet_Render_Hidden_Rows_Option').Run();
+
+//// Create View With CAD Options
+//require('./Working_With_View/Viewer_Node_Create_View_With_CAD_Options').Run();
+
+//// Create View With Project Options
+//require('./Working_With_View/Viewer_Node_Create_View_With_Project_Options').Run();
+
+//// Create View With Fonts Path Options
+//require('./Working_With_View/Viewer_Node_Create_View_With_Fonts_Path_Options').Run();
+
+//// Create View With Start Page & To Count Pages
+//require('./Working_With_View/Viewer_Node_Create_View_With_StartPage_And_CountPages').Run();
+
+//// Create View With HTML ViewOptions
+//require('./Working_With_View/Viewer_Node_Create_View_With_HTML_ViewOptions').Run();
+
+			//// ***********************************************************
+			//// ***** DELETE VIEWS *****
+			//// ***********************************************************
+
+//// Delete View With Default ViewFormat
+//require('./Working_With_View/Viewer_Node_Delete_View_With_Default_ViewFormat').Run();
