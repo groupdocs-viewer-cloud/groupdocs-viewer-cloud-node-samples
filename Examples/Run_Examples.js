@@ -165,6 +165,12 @@ require('./Supported_File_Formats/Viewer_Node_Get_All_Supported_Formats').Run();
 //// Create View With HTML ViewOptions
 //require('./Working_With_View/Viewer_Node_Create_View_With_HTML_ViewOptions').Run();
 
+//// Create View With Responsive HTML ViewOptions
+//require('./Working_With_View/Viewer_Node_Create_View_With_Responsive_HTML').Run();
+
+//// Create View With Output Path & ViewOptions
+//require('./Working_With_View/Viewer_Node_Create_View_With_OutputPath').Run();
+
 			//// ***********************************************************
 			//// ***** DELETE VIEWS *****
 			//// ***********************************************************
