@@ -57,8 +57,10 @@
     <Compile Include="Working_With_Storage\Viewer_Node_Object_Exists.js" />
     <Compile Include="Working_With_Storage\Viewer_Node_Storage_Exist.js" />
     <Compile Include="Working_With_View\Viewer_Node_Create_View_With_Fonts_Path_Options.js" />
+    <Compile Include="Working_With_View\Viewer_Node_Create_View_With_Responsive_HTML.js" />
     <Compile Include="Working_With_View\Viewer_Node_Create_View_With_HTML_ViewOptions.js" />
     <Compile Include="Working_With_View\Viewer_Node_Create_View_With_CAD_Options.js" />
+    <Compile Include="Working_With_View\Viewer_Node_Create_View_With_OutputPath.js" />
     <Compile Include="Working_With_View\Viewer_Node_Delete_View_With_Default_ViewFormat.js" />
     <Compile Include="Working_With_View\Viewer_Node_Create_View_With_StartPage_And_CountPages.js" />
     <Compile Include="Working_With_View\Viewer_Node_Create_View_With_Project_Options.js" />
