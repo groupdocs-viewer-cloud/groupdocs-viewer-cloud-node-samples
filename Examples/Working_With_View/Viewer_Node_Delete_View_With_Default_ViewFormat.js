@@ -13,7 +13,7 @@ class Viewer_Node_Delete_View_With_Default_ViewFormat {
 
 		var request = new groupdocs_viewer_cloud_1.DeleteViewRequest(deleteViewOptions);
 
-		viewerApi.deleteView(request)
+		viewApi.deleteView(request)
 			.then(function (response) {
 				console.log("Expected response type is Void: View deleted with default View Format.");
 			})

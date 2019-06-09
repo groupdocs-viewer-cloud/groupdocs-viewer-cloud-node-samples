@@ -29,8 +29,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Common_Utilities\Utils.js" />
-    <Compile Include="Fonts_Resource\Viewer_Node_Delete_Fonts_Resources.js" />
-    <Compile Include="Fonts_Resource\Viewer_Node_Get_Fonts_Resources.js" />
     <Compile Include="Run_Examples.js" />
     <Compile Include="Supported_File_Formats\Viewer_Node_Get_All_Supported_Formats.js" />
     <Compile Include="Working_With_Document_Information\Viewer_Node_Get_Info_With_Image_View_Options_Options.js" />
@@ -88,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common_Utilities\" />
-    <Folder Include="Fonts_Resource\" />
     <Folder Include="Resources\" />
     <Folder Include="Resources\viewerdocs\" />
     <Folder Include="Supported_File_Formats\" />

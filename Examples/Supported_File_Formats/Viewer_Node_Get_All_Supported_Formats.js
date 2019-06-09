@@ -2,7 +2,7 @@
 class Viewer_Node_Get_All_Supported_Formats {
 	static Run() {
 		// retrieve supported file-formats
-		viewerApi.getSupportedFileFormats()
+		infoApi.getSupportedFileFormats()
 			.then(function (response) {
 				console.log("Supported file-formats:");
 				response.formats.forEach(function (format) {
