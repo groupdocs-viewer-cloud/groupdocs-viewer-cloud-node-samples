@@ -13,7 +13,7 @@ class Viewer_Node_Create_View_With_Minimal_ViewOptions {
 
 		var request = new groupdocs_viewer_cloud_1.CreateViewRequest(viewOptions);
 
-		viewerApi.createView(request)
+		viewApi.createView(request)
 			.then(function (response) {
 				console.log("Expected response type is ViewResult: " + response.pages.length);
 			})

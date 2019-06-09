@@ -14,7 +14,7 @@ class Viewer_Node_Get_Info_With_Image_View_Format {
 
 		var request = new groupdocs_viewer_cloud_1.GetInfoRequest(viewOptions);
 
-		viewerApi.getInfo(request)
+		infoApi.getInfo(request)
 			.then(function (response) {
 				console.log("Expected response type is InfoResult: " + response.pages.length);
 			})

@@ -13,8 +13,11 @@ global.appSid = "XXXXX-XXXXX-XXXXX";
 global.appKey = "XXXXXXXXXX";
 global.myStorage = "XXXXX";
 
-// construct ViewerApi
-global.viewerApi = groupdocs_viewer_cloud_1.ViewerApi.fromKeys(appSid, appKey);
+// construct ViewApi
+global.viewApi = groupdocs_viewer_cloud_1.ViewApi.fromKeys(appSid, appKey);
+
+// construct InfoApi
+global.infoApi = groupdocs_viewer_cloud_1.InfoApi.fromKeys(appSid, appKey);
 
 // construct StorageApi
 global.storageApi = groupdocs_viewer_cloud_1.StorageApi.fromKeys(appSid, appKey);
