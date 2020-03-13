@@ -1,12 +1,15 @@
 {
   "name": "group-docs.viewer.cloud.node.examples",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "GroupDocs.Viewer.Cloud.Node.Examples",
   "main": "app.js",
   "author": {
-    "name": ""
+    "name": "GroupDocs Product Team"
   },
   "dependencies": {
-    "groupdocs-viewer-cloud": "^19.4.0"
+    "groupdocs-viewer-cloud": "^20.3.0"
+  },
+  "scripts": {
+    "start": "node RunExamples.js"
   }
 }
