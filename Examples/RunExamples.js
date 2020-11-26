@@ -8,14 +8,14 @@ global.serializer_1 = require("groupdocs-viewer-cloud/lib/serializer");
 ////          GroupDocs.Viewer Cloud API Examples
 //// ***********************************************************
 
-//TODO: Get your AppSID and AppKey at https://dashboard.groupdocs.cloud (free registration is required).
+//TODO: Get your Client Id and Client Secret at https://dashboard.groupdocs.cloud (free registration is required).
 
-global.appSid = "XXXX-XXXX-XXXX-XXXX";
-global.appKey = "XXXXXXXXXXXXXXXX";
+global.clientId = "XXXX-XXXX-XXXX-XXXX";
+global.clientSecret = "XXXXXXXXXXXXXXXX";
 
 global.myStorage = "First Storage";
 
-const config = new viewer_cloud.Configuration(appSid, appKey);
+const config = new viewer_cloud.Configuration(clientId, clientSecret);
 config.apiBaseUrl = "https://api.groupdocs.cloud";
 
 // construct ViewApi
