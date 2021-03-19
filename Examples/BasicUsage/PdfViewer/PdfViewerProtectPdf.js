@@ -9,7 +9,7 @@ class PdfViewerProtectPdf {
         viewOptions.fileInfo = fileInfo;
         viewOptions.viewFormat = viewer_cloud.ViewOptions.ViewFormatEnum.PDF;
         viewOptions.renderOptions = new viewer_cloud.PdfOptions();
-        viewOptions.renderOptions.permissions = viewer_cloud.PdfOptions.PermissionsEnum.DenyModification,
+        viewOptions.renderOptions.permissions = ["DenyModification"],
         viewOptions.renderOptions.permissionsPassword = "p123";
         viewOptions.renderOptions.documentOpenPassword = "o123";
 
