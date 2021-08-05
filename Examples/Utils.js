@@ -25,6 +25,10 @@ class Utils {
 		await this.UploadTestFile("SampleFiles/sample.ost");
 		await this.UploadTestFile("SampleFiles/sample.pdf");
 		await this.UploadTestFile("SampleFiles/sample.xlsx");
+		await this.UploadTestFile("SampleFiles/sample.jpg");
+		await this.UploadTestFile("SampleFiles/sample.txt");
+		await this.UploadTestFile("SampleFiles/sample.nsf");
+		await this.UploadTestFile("SampleFiles/sample.vssx");
 		await this.UploadTestFile("SampleFiles/shift_jis_encoded.txt");
 		await this.UploadTestFile("SampleFiles/with_attachments.msg");
 		await this.UploadTestFile("SampleFiles/with_comment.docx");

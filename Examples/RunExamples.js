@@ -43,6 +43,8 @@ async function examples() {
     await require('./BasicUsage/HtmlViewer/HtmlViewerExcludeFonts').Run();
     await require('./BasicUsage/HtmlViewer/HtmlViewerMinifyHtml').Run();
     await require('./BasicUsage/HtmlViewer/HtmlViewerResponsiveLayout').Run();
+    await require('./BasicUsage/HtmlViewer/HtmlViewerLimitImageSize').Run();
+    await require('./BasicUsage/HtmlViewer/HtmlViewerOptimizeForPrinting').Run();
     await require('./BasicUsage/ImageViewer/ImageViewerAddTextOverlay').Run();
     await require('./BasicUsage/ImageViewer/ImageViewerAdjustImageSize').Run();
     await require('./BasicUsage/ImageViewer/ImageViewerAdjustJpgQuality').Run();
@@ -94,6 +96,9 @@ async function examples() {
     await require('./AdvancedUsage/RenderingOptionsByFileType/RenderingSpreadsheets/SkipRenderingOfEmptyRows').Run();
     await require('./AdvancedUsage/RenderingOptionsByFileType/RenderingSpreadsheets/SplitWorksheetsIntoPages').Run();
     await require('./AdvancedUsage/RenderingOptionsByFileType/RenderingWordProcessingDocuments/RenderTrackedChanges').Run();
+    await require('./AdvancedUsage/RenderingOptionsByFileType/RenderingLotusNotesDatabase/FilterMailStorage').Run();
+    await require('./AdvancedUsage/RenderingOptionsByFileType/RenderingTextFiles/SpecifyMaxCharsAndRows').Run();
+    await require('./AdvancedUsage/RenderingOptionsByFileType/RenderingVisioDocuments/RenderVisioDocumentFigures').Run();
 }
 
 examples();
