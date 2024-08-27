@@ -7,7 +7,7 @@
     "name": "GroupDocs Product Team"
   },
   "dependencies": {
-    "groupdocs-viewer-cloud": "^24.3.0"
+    "groupdocs-viewer-cloud": "^24.8.0"
   },
   "scripts": {
     "start": "node RunExamples.js"
